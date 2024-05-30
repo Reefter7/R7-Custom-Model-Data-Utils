@@ -1,0 +1,2 @@
+scoreboard objectives add r7_custommodeldata trigger
+scoreboard objectives add r7_attune trigger
