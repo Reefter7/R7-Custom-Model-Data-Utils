@@ -22,7 +22,7 @@ execute if score r7_cmdu_cmd_trigger r7_options matches 1 run tellraw @s [" ",\
 	{"text":"/trigger r7_custommodeldata set <value>","hoverEvent":{"action":"show_text",\
 		"contents":"this command sets the minecraft:custom_model_data attribute of the item in the initiator's mainhand."}},\
 	{"text":" "},\
-	{"text":"[DISABLE]","color":"dark_red","clickEvent":{"action":"run_command",\
+	{"text":"[DISABLE] ","color":"dark_red","clickEvent":{"action":"run_command",\
 			"value":"/function r7_cmdu:option/disable_cmd"}, \
 		"hoverEvent":{"action":"show_text",\
 			"contents":"click to disable this command"}}\
@@ -70,6 +70,13 @@ execute if score r7_cmdu_attune_trigger r7_options matches 0 run tellraw @s [" "
 
 
 ##final line
-tellraw @s [" ", {"text":"*-*-*-*-*-*-*-*-*-*-*-*-*","color":"#5593FF"}]
+tellraw @s ["\n ", \
+	{"text":"to give a player permission to use a trigger, use \n ", "color": "aqua"},\
+	{"text":"/scoreboard players enable <selector> <trigger>\n ", "color": "gray", "clickEvent": {"action": "suggest_command",\
+			"value": "/scoreboard players enable "}, \
+		"hoverEvent": {"action": "show_text",\
+			"contents":"Put in commandline"}},\
+	{"text":"\u2b50 This permission cannot be removed \u2b50\n", "bold":true, "color": "dark_red"},\
+	{"text":"*-*-*-*-*-*-*-*-*-*-*-*-*","color":"#5593FF"}]
 
 # execute unless score r7_cmdu_cmd_trigger r7_options matches 0 run 
