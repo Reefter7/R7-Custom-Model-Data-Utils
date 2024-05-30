@@ -1,0 +1,3 @@
+scoreboard objectives remove r7_custommodeldata
+scoreboard objectives remove r7_attune
+scoreboard objectives remove r7_options
